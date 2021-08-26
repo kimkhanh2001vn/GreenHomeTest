@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace GreenHouse.Web.Controllers
 {
@@ -26,10 +22,10 @@ namespace GreenHouse.Web.Controllers
 
             return View();
         }
+
         public ActionResult Login()
         {
             ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
