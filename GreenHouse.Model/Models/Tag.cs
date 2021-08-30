@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GreenHouse.Model.Models
@@ -16,5 +17,6 @@ namespace GreenHouse.Model.Models
 
         [MaxLength(256)]
         public string Type { get; set; }
+        public IEnumerable<PostTag> postTags { get; set; }
     }
 }

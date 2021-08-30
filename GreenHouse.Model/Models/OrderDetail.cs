@@ -6,10 +6,10 @@ namespace GreenHouse.Model.Models
     [Table("OrderDetails")]
     public class OrderDetail
     {
-        [Key]
+        [Key][Column(Order = 1)]
         public int OrderID { get; set; }
-
         [Key]
+        [Column(Order = 2)]
         public int ProductID { get; set; }
 
         public int Quantity { get; set; }
@@ -19,7 +19,6 @@ namespace GreenHouse.Model.Models
 
         [ForeignKey("OrderID")]
         public virtual Order Order { get; set; }
-
         [ForeignKey("ProductID")]
         public virtual Product Product { get; set; }
     }
