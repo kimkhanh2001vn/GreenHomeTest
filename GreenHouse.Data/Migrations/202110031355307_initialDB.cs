@@ -193,7 +193,7 @@
                 c => new
                     {
                         PostID = c.Int(nullable: false),
-                        TagID = c.Int(nullable: false),
+                        TagID = c.String(nullable: false, maxLength: 128),
                     })
                 .PrimaryKey(t => new { t.PostID, t.TagID })
                 .ForeignKey("dbo.Posts", t => t.PostID, cascadeDelete: true)
@@ -205,7 +205,7 @@
                 "dbo.Tags",
                 c => new
                     {
-                        ID = c.Int(nullable: false, identity: true),
+                        ID = c.String(nullable: false, maxLength: 128),
                         Name = c.String(nullable: false, maxLength: 256),
                         Type = c.String(maxLength: 256),
                     })

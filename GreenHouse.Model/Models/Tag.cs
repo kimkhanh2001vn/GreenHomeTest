@@ -8,8 +8,7 @@ namespace GreenHouse.Model.Models
     public class Tag
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { get; set; }
+        public string ID { get; set; }
 
         [Required]
         [MaxLength(256)]

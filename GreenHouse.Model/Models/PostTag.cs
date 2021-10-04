@@ -11,7 +11,7 @@ namespace GreenHouse.Model.Models
         public int PostID { get; set; }
         [Key]
         [Column(Order = 2)]
-        public int TagID { get; set; }
+        public string TagID { get; set; }
 
         [ForeignKey("PostID")]
         public virtual Post Post { get; set; }

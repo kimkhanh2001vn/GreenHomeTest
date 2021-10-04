@@ -5,7 +5,7 @@ namespace GreenHouse.Data
 {
     public class GreenHouseDbContext : DbContext
     {
-        public GreenHouseDbContext() : base("GreenhouseConnection")
+        public GreenHouseDbContext() : base("GreenHouseDBConnection")
         {
             this.Configuration.LazyLoadingEnabled = false;
         }

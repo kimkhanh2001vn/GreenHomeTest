@@ -5,12 +5,12 @@ using System.Linq;
 
 namespace GreenHouse.Data.Repositories
 {
-    public interface IProductReponsitory
+    public interface IProductReponsitory : IRepository<Product>
     {
         IEnumerable<Product> GetByAlias(string alias);
     }
 
-    public class ProductReponsitory : RepositoryBase<Product>
+    public class ProductReponsitory : RepositoryBase<Product>, IProductReponsitory
     {
         public ProductReponsitory(DbFactory dbFactory)
             : base(dbFactory)

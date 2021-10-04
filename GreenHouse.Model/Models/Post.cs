@@ -53,5 +53,8 @@ namespace GreenHouse.Model.Models
 
         [ForeignKey("CategoryID")]
         public virtual PostCategory PostCategory { get; set; }
+        
+        public virtual IEquatable<PostTag> PostTags { get; set; }
+
     }
 }

@@ -6,12 +6,12 @@ using System.Linq.Expressions;
 
 namespace GreenHouse.Data.Infrastructure
 {
-    public class RepositoryBase<T> : IRepository<T> where T : class
+    public abstract class RepositoryBase<T> : IRepository<T> where T : class
     {
         #region Properties
 
         private GreenHouseDbContext dataContext;
-        private readonly IDbSet<T> dbSet;
+        private readonly IDbSet<T> dbSet; 
 
         protected IDbFactory DbFactory
         {
